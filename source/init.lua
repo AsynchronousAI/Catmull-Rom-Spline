@@ -201,7 +201,7 @@ function CatmullRomSplineFunctions:ConnectSpline(spline: CatmullRomSplineObject)
 		end
 		return true
 	end
-	if not checkIfPointsMatch((typeof(associatedPoints[1]) == "number" or typeof(associatedPoints[1]) == "Vector3") and associatedPoints[1] or associatedPoints[1].Position) then
+	if not checkIfPointsMatch((typeof(associatedPoints[1]) == "number" or typeof(associatedPoints[1]) == "Vector3" or typeof(associatedPoints[1]) == "Vector2") and associatedPoints[1] or associatedPoints[1].Position) then
 		error("Cannot connect the spline because the splines do not have the same types of points!")
 	end
 	if associatedPoints[2] == points[1] and associatedPoints[3] == points[2] and associatedPoints[4] == points[3] then
